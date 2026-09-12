@@ -84,8 +84,8 @@ function HistoryPage() {
       <HistoryHero />
 
       <Tabs defaultValue="story" dir="rtl" className="space-y-4">
-        <div className="-mx-1 overflow-x-auto px-1">
-          <TabsList className="inline-flex h-auto w-max gap-1 rounded-2xl bg-secondary/60 p-1">
+        <div>
+          <TabsList className="grid h-auto w-full grid-cols-3 gap-1 rounded-2xl bg-secondary/60 p-1">
             {[
               { v: "story", t: "الحكاية", i: HistoryIcon },
               { v: "honours", t: "البطولات", i: Trophy },
@@ -141,6 +141,7 @@ function HistoryHero() {
     { k: "1920", v: "سنة التأسيس" },
     { k: "17", v: "لقب دوري القناة" },
     { k: "1", v: "كأس مصر" },
+    { k: "1", v: "كأس الرابطة 2025/26" },
     { k: `${COACH_HISTORY.length}`, v: "فترة تدريبية موثّقة" },
     { k: `${PRESIDENTS.length}`, v: "فترة رئاسة" },
   ];
