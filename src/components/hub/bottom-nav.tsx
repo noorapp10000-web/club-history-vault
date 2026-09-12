@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { CalendarDays, Home, ListOrdered, Newspaper, Users } from "lucide-react";
+import { CalendarDays, Home, Landmark, ListOrdered, Newspaper, Users } from "lucide-react";
 
 const ITEMS = [
   { to: "/", label: "الرئيسية", icon: Home },
@@ -7,12 +7,13 @@ const ITEMS = [
   { to: "/table", label: "الترتيب", icon: ListOrdered },
   { to: "/squad", label: "الفريق", icon: Users },
   { to: "/news", label: "الأخبار", icon: Newspaper },
+  { to: "/history", label: "التاريخ", icon: Landmark },
 ] as const;
 
 export function BottomNav() {
   return (
     <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-border/70 bg-background/85 backdrop-blur-xl">
-      <ul className="mx-auto grid max-w-3xl grid-cols-5">
+      <ul className="mx-auto grid max-w-3xl grid-cols-6">
         {ITEMS.map(({ to, label, icon: Icon }) => (
           <li key={to}>
             <Link
@@ -24,7 +25,7 @@ export function BottomNav() {
               {({ isActive }) => (
                 <>
                   <span
-                    className={`flex h-8 w-14 items-center justify-center rounded-full transition-all ${
+                    className={`flex h-8 w-12 items-center justify-center rounded-full transition-all ${
                       isActive ? "bg-primary/15 shadow-[0_0_20px_-6px_var(--primary)]" : ""
                     }`}
                   >
